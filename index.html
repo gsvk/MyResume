@@ -195,14 +195,15 @@
 	            listItem.style.marginLeft = '20px'; // Adjust the margin as needed
 	        }
 	
-	        // Remove the initial period and space, then set the text content
-	        listItem.textContent = item.slice(2);
+	        // Set the text content
+	        listItem.textContent = item;
 	
 	        modalList.appendChild(listItem);
 	    });
 	
 	    modalContainer.style.display = 'block';
 	}
+
 
         // Function to close the modal
         function closeModal() {
