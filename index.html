@@ -51,11 +51,13 @@
     <h1>Govindu Sankaraiah Vinod Kumar @ Vinod</h1>
     <img src="./azureFundamentals.png" width="200" height="200" align="right" />
     <img src="./azureAdministrator.png" width="200" height="200" align="right" />
-    <h2>I am a Master of Science degree candidate, specializing in Computer Science. I come from a solid technical background with a strong interest in business and a passion towards strategy. I have total 8+ years of experience in IT industry with 7+ years of experience in DevOps/Azure DevOps/ DevSecOps.</h2>
+    <h3>I am a Master of Science degree candidate, specializing in Computer Science. I come from a solid technical background with a strong interest in business and a passion towards strategy. I have total 8+ years of experience in IT industry with 7+ years of experience in DevOps/Azure DevOps/ DevSecOps.</h3>
     <section id="experience">
         <div id="buttonsContainer">
-            <button class="actionButton" id="experienceButton">Experience</button>
-            <button class="actionButton" id="educationButton">Education</button>
+	    <button class="actionButton" id="educationButton">Education</button>
+            <button class="actionButton" id="skillsButton">SkillSet</button>
+	    <button class="actionButton" id="experienceButton">Experience</button>
+            <button class="actionButton" id="projectsButton">Projects & Responsibilities</button>
         </div>
     </section>
 
@@ -74,6 +76,8 @@
           // Get references to the buttons and modal elements
         const experienceButton = document.getElementById('experienceButton');
         const educationButton = document.getElementById('educationButton');
+	const skillsButton = document.getElementById('skillsButton');
+	const projetsButton = document.getElementById('projectsButton');
         const modalContainer = document.getElementById('modalContainer');
         const modalTitle = document.getElementById('modalTitle');
         const modalList = document.getElementById('modalList');
@@ -99,6 +103,76 @@
                 'Completed M.Tech in Computer Science & Engineering from JNTU, Anantapur',
                 'Completed M.Sc in Computer Science from SVU, Tirupati'
                
+            ]);
+        });
+
+	// Add a click event listener to the "Show skills" button
+        skillsButton.addEventListener('click', () => {
+            showModal('Skills', [
+                'My Skill set are:',
+                'Bitbucket, GitHub, Confluence, Gitlab CI, Docker, SAST, DAST, Kubernetes, Powershell, Docker file, JIRA, Jenkins, Ansible, Groovy, SQL, SonarQube, Apache Tomcat, Ansible Tower, Octopus Deploy, Makefile, ANT, Maven, Shell Scripting, Bicep, ARM Templates, Azure, Azure DevOps, Security scans like Bava & Qualys, Manual Testing, Automation testing with Robot Framework, Cypress, Selenium webdriver, etc. '
+               
+            ]);
+        });
+	
+	// Add a click event listener to the "Show Education" button
+        projecctsButton.addEventListener('click', () => {
+            showModal('Projects & Responsibilities', [
+                'Worked exclusively on different projects like Banking, Insurance etc.,',
+                'Core-Competency: writing Automaton scripts, Installing & Configuring Jenkins, Robot Framework, Cypress, Azure DevOps, Automating Azure Resources, providing permanent solution for frequent solutions, preparing Runbook for complex and new issues, writing yaml pipelines for different types of projects like Angular, NPM, DotNet etc., Scheduling deployments etc., ',
+		'Projects worked in career are:',
+		'Real Estate Software',
+		'HPE -T-Square',
+		'Sogeti - Essilor | Essilor QA Environment Management',
+		'HSBC - HSBC PEAK PAYME',
+		'CISCO - CDT ToolChain',
+		'RBC - CCT (Contact Center Technology) DevOps',
+		'Shared Services',
+		'Starr Insurance',
+		'AMD',
+		'Responsiblities are:',
+		'Lead for DevOps and Automation Testing Teams',
+		'POC for L2 Production Support',
+		'Working with Azure DevOps, creating CI/CD Pipeline, Automating build system, release pipelines, Gitlab pipelines',
+		'Creating Blueprints in CS Pro tool and reserving Sandboxes',
+		'Working with IaaS using Terraform, ARM Templates',
+		'Security Operations like SAST and DAST with multiple tools',
+		'Working with Github, Docker( writing Dockerfile, running images etc.,), Docker Hadolint, Qualys, Makefile with Docker',
+		'Creating Git Semantic Versioning through PR templates, Githooks',
+ 		'Writing custom Githooks (post-merge, prepare-commit-message, pre-merge etc.,)',
+		'Designing CI/CD pipeline architecture',
+		'Creating builds using shell scripts Makefile, ANT/Maven',
+		'Working with Automation Testing tools like, Cypress, Robot Framework',
+		'Working with Octopus Deploy, creating Projects, Process Steps',
+		'Creating External Feeds, customized steps for release pipeline Working with Ansible, Jenkins, creating CI/CD Pipeline, creating jobs, configuring Master – Slave architecture, installing plugins, automating build, continuous integration and administering Jenkins',
+		'Automating Build System and daily tasks',
+		'Working with Git, creating branches, merging branches and resolving merging conflicts etc.,',
+		'Implemented & Integrated new tools like Cypress, Detox & Cavy for Automation Testing in DevOps pipeline',
+		'Modifying Json file according to new requirements',
+		'Working with Ansible, writing Ansible playbook',
+		'Working with Crucible, creating projects, managing admin users & groups, configuring/modifying LDAP and creating review',
+		'Working with QC, Spinnaker, Selenium, Bitbucket and Crucible',
+		'Working with Rally and ESP (Enterprise Service Now) to track tickets and administration task',
+		'Working with QC, Spinnaker, Selenium, Bitbucket and Crucible',
+		'Working with Azure, creating VM, Storage Account, App Gateway, Eventhubs, etc.,',
+		'Working with APIs',
+		'Adding Azure Dashboards to groups with specific permissions',
+		'Working with Jira and Confluence, Analyzing & Segregating Jira Tickets',
+		'Preparing test cases and Validating QA environment',
+		'Generating Scheduled Jobset Reports',
+		'Modifying Users with additional responsibilities',
+		'Generating Essilor Orders, Failed Jobset, Concurrent Jobs, ELOA, EOA, NVG, Critical Jobset Reports',
+		'Writing Unix Shell script for new requirement',
+		'Understanding the existing scripts and modifying it according to the new requirement',
+		'Segregating the files as per requirement',
+		'Writing test cases',
+		'Bug tracking',
+		'Automating the daily task',
+		'Writing new Test Cases',
+		'Modifying existing test cases according to new UI',
+		'Automating manual test cases',
+		'Preparing Test Plan',
+		'Bug tracking'
             ]);
         });
 
