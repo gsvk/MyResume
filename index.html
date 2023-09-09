@@ -61,16 +61,17 @@
         </div>
     </section>
 
-    <!-- Modal container -->
-    <div id="modalContainer">
-        <div id="modalContent">
-            <h3 id="modalTitle"></h3>
-            <ul id="modalList">
-                <!-- Content will be dynamically added here -->
-            </ul>
-        </div>
-	<button id="closeModal" class="actionButton">Close</button>
+   <!-- Modal container -->
+  <div id="modalContainer">
+    <div id="modalContent">
+        <h3 id="modalTitle"></h3>
+        <ul id="modalList">
+            <!-- Content will be dynamically added here -->
+        </ul>
     </div>
+    <!-- Close button is moved outside of modalContent -->
+    <button id="closeModal" class="actionButton">Close</button>
+  </div>
 
     <script>
           // Get references to the buttons and modal elements
@@ -116,7 +117,7 @@
         });
 	
 	// Add a click event listener to the "Show Education" button
-        projecctsButton.addEventListener('click', () => {
+        projectsButton.addEventListener('click', () => {
             showModal('Projects & Responsibilities', [
                 'Worked exclusively on different projects like Banking, Insurance etc.,',
                 'Core-Competency: writing Automaton scripts, Installing & Configuring Jenkins, Robot Framework, Cypress, Azure DevOps, Automating Azure Resources, providing permanent solution for frequent solutions, preparing Runbook for complex and new issues, writing yaml pipelines for different types of projects like Angular, NPM, DotNet etc., Scheduling deployments etc., ',
