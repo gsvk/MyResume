@@ -86,7 +86,7 @@
 
         // Add a click event listener to the "Show Past Companies" button
         experienceButton.addEventListener('click', () => {
-            showModal('Past Companies', [
+            showModal('Experience', [
                 'Infosys BPO Limited, Bangalore as Operations Process Executive - Jun 2013 to Feb 2014',
                 'eBusiness Applications, Dubai as Software Tester - Oct 2014 to Oct 2015',
                 'Capgemini Technology Services India Limited, Bangalore as Senior Consultant - Sep 2016 to Sep 2018',
@@ -109,8 +109,7 @@
 
 	// Add a click event listener to the "Show skills" button
         skillsButton.addEventListener('click', () => {
-            showModal('Skills', [
-                'My Skill set are:',
+            showModal('Skills are', [
                 'Bitbucket, GitHub, Confluence, Gitlab CI, Docker, SAST, DAST, Kubernetes, Powershell, Docker file, JIRA, Jenkins, Ansible, Groovy, SQL, SonarQube, Apache Tomcat, Ansible Tower, Octopus Deploy, Makefile, ANT, Maven, Shell Scripting, Bicep, ARM Templates, Azure, Azure DevOps, Security scans like Bava & Qualys, Manual Testing, Automation testing with Robot Framework, Cypress, Selenium webdriver, etc. '
                
             ]);
@@ -187,22 +186,26 @@
 	    modalTitle.textContent = title;
 	    modalList.innerHTML = '';
 	
+	    let currentIndentation = 0; // Track the current level of indentation
+	
 	    content.forEach(item => {
 	        const listItem = document.createElement('li');
 	
-	        // Check if this item should have additional indentation
-	        if (item.startsWith('. ')) {
-	            listItem.style.marginLeft = '20px'; // Adjust the margin as needed
+	        // Calculate the level of indentation based on the number of leading periods
+	        const match = item.match(/^(\.+)\s*(.*)/);
+	        if (match) {
+	            const indentation = match[1].length * 20; // 20px per period of indentation
+	            listItem.style.marginLeft = `${indentation}px`;
+	            item = match[2]; // Remove the leading periods
 	        }
 	
-	        // Set the text content
 	        listItem.textContent = item;
-	
 	        modalList.appendChild(listItem);
 	    });
 	
 	    modalContainer.style.display = 'block';
 	}
+
 
 
         // Function to close the modal
