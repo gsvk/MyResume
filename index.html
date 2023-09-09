@@ -71,7 +71,60 @@
     </div>
 
     <script>
-        // Rest of your JavaScript code remains the same
+          // Get references to the buttons and modal elements
+        const experienceButton = document.getElementById('experienceButton');
+        const educationButton = document.getElementById('educationButton');
+        const modalContainer = document.getElementById('modalContainer');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalList = document.getElementById('modalList');
+        const closeModalButton = document.getElementById('closeModal');
+
+        // Add a click event listener to the "Show Past Companies" button
+        experienceButton.addEventListener('click', () => {
+            showModal('Past Companies', [
+                'Infosys BPO Limited, Bangalore as Operations Process Executive - Jun 2013 to Feb 2014',
+                'eBusiness Applications, Dubai as Software Tester - Oct 2014 to Oct 2015',
+                'Capgemini Technology Services India Limited, Bangalore as Senior Consultant - Sep 2016 to Sep 2018',
+		'Capgemini Technology Services, Hong Kong as Senior Consultant - Sep 2018 to May 2019',
+		'Capgemini Technology Services India Limited, Bangalore as Senior Consultant - May 2019 to Nov 2021',
+		'MindTree Limited, Bangalore as Technical Lead - Nov 2021 to Aug 2022',
+		'Infosys Limited, Bangalore as Senior Consultant - Aug 2022 to TillDate'
+                // Add more past companies as needed
+            ]);
+        });
+
+        // Add a click event listener to the "Show Education" button
+        educationButton.addEventListener('click', () => {
+            showModal('Education', [
+                'Completed M.Tech in Computer Science & Engineering from JNTU, Anantapur',
+                'Completed M.Sc in Computer Science from SVU, Tirupati'
+               
+            ]);
+        });
+
+        // Add a click event listener to the close button
+        closeModalButton.addEventListener('click', () => {
+            closeModal();
+        });
+
+        // Function to show the modal with dynamic content
+        function showModal(title, content) {
+            modalTitle.textContent = title;
+            modalList.innerHTML = '';
+
+            content.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                modalList.appendChild(listItem);
+            });
+
+            modalContainer.style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modalContainer.style.display = 'none';
+        }
     </script>
 </body>
 </html>
